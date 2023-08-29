@@ -1,0 +1,105 @@
+{
+    "products": [
+      {
+        "product_name": "High-quality Wireless Headphones",
+        "product_description": "Immerse yourself in sound with these premium wireless headphones.",
+        "unit_price": 149.99,
+        "product_full_image": "https://media.istockphoto.com/id/1475657774/photo/headphone-isolated-on-white-background.webp?b=1&s=170667a&w=0&k=20&c=aBZjaZDcfrUEGku3klrI_3swZ8xS4j1KUWc6El17lfA=",
+        "product_thumbnail": "https://example.com/images/headphones_thumb.jpg",
+        "ranking": 4.5,
+        "created": "2023-08-28T14:25:39.442Z",
+        "updated": "2023-08-28T14:25:39.442Z"
+      },
+      {
+        "product_name": "Soft Cotton T-shirt",
+        "product_description": "Stay comfortable in this soft and breathable cotton t-shirt.",
+        "unit_price": 19.99,
+        "product_full_image": "https://media.istockphoto.com/id/1345934516/photo/natural-organic-cotton-t-shirts-and-cotton-plant-flowers-on-white-table-eco-clothes-fashion.webp?b=1&s=170667a&w=0&k=20&c=8XXlJzUepIQsw9PVzk1gtXdAjYiKLSxsCa8YVu-gIbY=",
+        "product_thumbnail": "https://example.com/images/tshirt_thumb.jpg",
+        "ranking": 4.2,
+        "created": "2023-08-28T14:25:39.442Z",
+        "updated": "2023-08-28T14:25:39.442Z"
+      },
+      {
+        "product_name": "Stainless Steel Water Bottle",
+        "product_description": "Stay hydrated on the go with this durable stainless steel water bottle.",
+        "unit_price": 12.99,
+        "product_full_image": "https://media.istockphoto.com/id/940179004/photo/group-colorful-water-bottle-pure-white-background.webp?b=1&s=170667a&w=0&k=20&c=vA8bt1xR_h8ToP8KpPW9LKHSO3Bo7CaD97SVebIDSXM=",
+        "product_thumbnail": "https://example.com/images/water_bottle_thumb.jpg",
+        "ranking": 4.8,
+        "created": "2023-08-28T14:25:39.442Z",
+        "updated": "2023-08-28T14:25:39.442Z"
+      },
+      {
+        "product_name": "Compact Digital Camera",
+        "product_description": "Capture memories with this feature-rich compact digital camera.",
+        "unit_price": 249.99,
+        "product_full_image": "https://media.istockphoto.com/id/183111364/photo/digital-compact-camera-isolated-on-white.webp?b=1&s=170667a&w=0&k=20&c=wpTHxeKGiMsupEeVwNaY8SZB57qv6e4Ak-FGCa6tMJE=",
+        "product_thumbnail": "https://example.com/images/camera_thumb.jpg",
+        "ranking": 4.6,
+        "created": "2023-08-28T14:25:39.442Z",
+        "updated": "2023-08-28T14:25:39.442Z"
+      },
+      {
+        "product_name": "Leather Wallet with RFID Protection",
+        "product_description": "Keep your essentials secure with this stylish leather wallet.",
+        "unit_price": 29.99,
+        "product_full_image": "https://media.istockphoto.com/id/1329261565/photo/front-and-back-view-of-open-leather-wallet-isolated-on-white-background-with-clipping-path.webp?b=1&s=170667a&w=0&k=20&c=azV5LtgNkSqKG05S1zDezb3MdQOLbXE6LoJsiIBrSfs=",
+        "product_thumbnail": "https://example.com/images/wallet_thumb.jpg",
+        "ranking": 4.3,
+        "created": "2023-08-28T14:25:39.442Z",
+        "updated": "2023-08-28T14:25:39.442Z"
+      },
+      {
+        "product_name": "Set of Resistance Bands for Workouts",
+        "product_description": "Enhance your fitness routine with this versatile set of resistance bands.",
+        "unit_price": 24.99,
+        "product_full_image": "https://media.istockphoto.com/id/1187692623/photo/elastic-rubber-bands-for-fitness.webp?b=1&s=170667a&w=0&k=20&c=r2E-0g3HZpBMNda8dR-0ePt94JTe5Wx9FbDSMcfHNAI=",
+        "product_thumbnail": "https://example.com/images/resistance_bands_thumb.jpg",
+        "ranking": 4.7,
+        "created": "2023-08-28T14:25:39.442Z",
+        "updated": "2023-08-28T14:25:39.442Z"
+      },
+      {
+        "product_name": "Classic Wristwatch with Leather Band",
+        "product_description": "Elevate your style with this timeless wristwatch featuring a leather band.",
+        "unit_price": 89.99,
+        "product_full_image": "https://media.istockphoto.com/id/1331924010/photo/gold-wrist-watch-on-a-black-background-luxury-accessories-for-men.webp?b=1&s=170667a&w=0&k=20&c=_w5RCMAIhCcXeDjtQGkJsMs4TWU76OsmVaO7afCl4-M=",
+        "product_thumbnail": "https://example.com/images/wristwatch_thumb.jpg",
+        "ranking": 4.4,
+        "created": "2023-08-28T14:25:39.442Z",
+        "updated": "2023-08-28T14:25:39.442Z"
+      },
+      {
+        "product_name": "Non-stick Frying Pan",
+        "product_description": "Cook like a pro with this high-quality non-stick frying pan.",
+        "unit_price": 39.99,
+        "product_full_image": "https://media.istockphoto.com/id/160633833/photo/new-frying-pan.webp?b=1&s=170667a&w=0&k=20&c=u--hWu5tpyX4iq8gOL16L1P3_F8Yfzld_0I7_GI4I1M=",
+        "product_thumbnail": "https://example.com/images/frying_pan_thumb.jpg",
+        "ranking": 4.1,
+        "created": "2023-08-28T14:25:39.442Z",
+        "updated": "2023-08-28T14:25:39.442Z"
+      },
+      {
+        "product_name": "Wireless Computer Mouse",
+        "product_description": "Experience seamless navigation with this ergonomic wireless computer mouse.",
+        "unit_price": 18.99,
+        "product_full_image": "https://media.istockphoto.com/id/182176393/photo/wireless-mouse.webp?b=1&s=170667a&w=0&k=20&c=OiHzIiy3PzO-nmv0g7v7RRjBqFxg6Sn-AfSs-LcsO4c=",
+        "product_thumbnail": "https://example.com/images/mouse_thumb.jpg",
+        "ranking": 4.9,
+        "created": "2023-08-28T14:25:39.442Z",
+        "updated": "2023-08-28T14:25:39.442Z"
+      },
+      {
+        "product_name": "Scented Soy Candle",
+        "product_description": "Create a soothing atmosphere with the gentle fragrance of this scented soy candle.",
+        "unit_price": 14.99,
+        "product_full_image": "https://images.unsplash.com/photo-1606418359454-a71d43fc394d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fFNjZW50ZWQlMjBTb3klMjBDYW5kbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+        "product_thumbnail": "https://example.com/images/candle_thumb.jpg",
+        "ranking": 4.0,
+        "created": "2023-08-28T14:25:39.442Z",
+        "updated": "2023-08-28T14:25:39.442Z"
+      }
+    ]
+  }
+  

@@ -1,3 +1,5 @@
+import react from 'react'
+
 function Homepage({product}){
     return(<>
     <h1 className="title"> Welcome to our shop</h1>

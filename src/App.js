@@ -3,6 +3,7 @@ import Login from './components/login';
 import {Routes, Route} from "react-router-dom"
 import Register from './components/register';
 import NavBar from './components/NavBar';
+import Homepage from './components/Homepage';
 
 
 
@@ -19,11 +20,10 @@ const[product, setProduct]=useState([])
    <div>
     <NavBar/>
     <Routes>
+          <Route path='/' element={<Homepage/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/signup' element={<Register/>}></Route>
     </Routes>
-
-    {/* navbar */}
     
    </div>
   );

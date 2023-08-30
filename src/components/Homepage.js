@@ -1,7 +1,7 @@
 function Homepage({product}){
     return(<>
     <h1 className="title"> Welcome to our shop</h1>
-    {product.map((item)=>(
+    {/* {product.map((item)=>(
         <div  className="products" key={item.id}>
    <h4>Product name:{item.product_name}</h4>
    <p >Product Decription:{item.product_description}</p>
@@ -13,7 +13,7 @@ function Homepage({product}){
    </div>
 
     ))}
-    
+     */}
     </>)
 }
 export default Homepage;

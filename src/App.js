@@ -9,22 +9,20 @@ import Register from './components/register';
 
 function App() {
 const[product, setProduct]=useState([])
-useEffect(()=>{
-  fetch("http://localhost:8000/products")
-  .then(res => res.json())
-  .then(data => setProduct(data))
-},[])
+// useEffect(()=>{
+//   fetch("http://localhost:8000/products")
+//   .then(res => res.json())
+//   .then(data => setProduct(data))
+// },[])
 
 
   return (
    <div>
     <Routes>
+          <Route path='/' element={<Homepage product={product}/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/signup' element={<Register/>}></Route>
-        </Routes>
-  
-   
-   <Homepage product ={product}/>
+    </Routes>
    </div>
   );
 }

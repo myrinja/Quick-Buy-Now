@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React,{useState,useEffect } from 'react'
+import Homepage from './component/Homepage';
+import './App.css'
+
+
+
 
 function App() {
+const[plants, setPlants]=useState([])
+useEffect(()=>{ fetch("http://localhost:8000/plants") 
+.then(res => res.json())
+  .then(data => setPlants(data))
+ },[])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div>
+  
+    <Homepage  plants={plants} />
+
+    {/* navbar */}
+    
+   </div>
   );
 }
+
+
 
 export default App;

@@ -1,6 +1,5 @@
 function Homepage({product}){
     return(<>
-    <h1 className="title"> Welcome to our shop</h1>
     {product.map((item)=>(
         <div  className="products" key={item.id}>
    <h4>Product name:{item.product_name}</h4>

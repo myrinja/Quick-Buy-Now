@@ -1,8 +1,16 @@
+.app{
+box-sizing: border-box;
+margin: 0;
 
+}
 .title{
   text-align: center;
 }
-
+.p {
+  height: 10px;
+  width: 30px;
+  font-size: 30px;
+}
 .products {
   
   border: 1px solid #ccc;
@@ -54,4 +62,22 @@ padding-left: 100px;
   height: auto;
   margin-top: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#signin{
+  background-color: #333;
+  color: #ccc;
+  float: right;
+  justify-content: right;
+  border-radius: 20px;
+}
+
+#signin:hover{
+  background-color: #009900;
+  transition: 0.6s ease-in-out;
+}
+.button{
+justify-content: right;
+padding: 20px px;
+border: none;
 }

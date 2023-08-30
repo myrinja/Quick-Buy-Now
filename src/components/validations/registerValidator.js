@@ -1,4 +1,5 @@
 function registerValidator(formdata) {
+    console.log(formdata)
     let error={}
     const emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+s/
     const passwordPattern=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/

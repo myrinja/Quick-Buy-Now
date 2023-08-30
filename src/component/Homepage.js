@@ -10,8 +10,9 @@ function Homepage({ plants }) {
           <div className="products" key={item.id}>
             <img src={item.image} alt={item.name} />
             <h4>Plant name: {item.name}</h4>
-            <h4>Plant price: {item.price}</h4>
+            <h4>Plant price:$ {item.price}</h4>
             <h4>Plant Category: {item.category}</h4>
+
           </div>
         ))}
       </div>

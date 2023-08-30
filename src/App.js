@@ -1,6 +1,8 @@
 import React,{useEffect,useState} from 'react';
 import './App.css';
 import Homepage from './components/Homepage';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Nav } from 'react-bootstrap';
 
 
 function App() {

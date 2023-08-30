@@ -1,15 +1,10 @@
-/* Homepage.css */
-
-.title {
+.App {
   text-align: center;
-  margin-top: 20px;
-  font-size: 28px;
 }
 
-.product-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Display in two columns */
-  gap: 20px; /* Gap between columns and rows */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
 .products {
@@ -23,9 +18,17 @@
 .products img {
   max-width: 100%;
   height: auto;
+.buttons{
+  display: flex;
+  justify-content: space-between;
 }
 
 .products h4 {
   margin-top: 10px;
   font-size: 18px;
+.buttons a{
+  margin: 2px;
 }
+.buttons a:hover{
+  background-color: greenyellow;
+  transition: 0.5s ease-in;

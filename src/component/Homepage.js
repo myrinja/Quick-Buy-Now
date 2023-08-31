@@ -18,7 +18,7 @@ function Homepage({ plants,addToCart }) {
         {plants.map((item) => (
           <div className='col-11 col-md-5 col-lg-3 mx-0 mb-4' key={item.id}> 
             <div className='card p-0 overflow-hidden h-100 shadow'>
-                <img src={item.image}  className='card-img-top img-fluid' alt={item.name}/>
+                <img src={item.image}  className='card-img-top img-fluid' alt={item.name} style={{height:"100%"}}/>
                 <div className='card-body'>
                     <h5 className='card-Title'>{item.name}</h5>
                     <h5 className='card-Title'>$ {item.price}</h5>

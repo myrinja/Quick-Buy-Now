@@ -61,7 +61,7 @@ function Cart (){
 
                 <div className="d-flex justify-content-between px-x">
                   <p className="fw-bold">Discount:</p>
-                  <p className="fw-bold">{cartTotal * 10/100 }$</p>
+                  <p className="fw-bold">{(cartTotal * 10/100 ).toFixed()}$</p>
                 </div>
                 <div className="d-flex justify-content-between p-2 mb-2" style={{backgroundColor: "#e1f5fe"}}>
                   <h5 className="fw-bold mb-0">Total:</h5>

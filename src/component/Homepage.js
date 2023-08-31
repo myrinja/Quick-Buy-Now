@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { Navigate, useNavigate } from 'react-router';
 import  { useCart } from "react-use-cart"
 
-function Homepage({ plants,addToCart }) {
+function Homepage({ plants }) {
   // const [cartItems, setCartItems] = useState([]);
   const { addItem }= useCart();
+  let navigate=useNavigate();
   
   // function addToCart(item){
   //   setCartItems([...cartItems, item]);
@@ -24,7 +26,12 @@ function Homepage({ plants,addToCart }) {
                     <h5 className='card-Title'>{item.name}</h5>
                     <h5 className='card-Title'>$ {item.price}</h5>
                     <p className='card-text'>{item.category}</p>
+                    <div className='d-flex' style={{justifyContent:"space-between"}}>
                     <button  onClick={() => addItem(item)} className='btn btn-success'>addToCart</button>
+                    <button  onClick={() => {
+                       navigate(`/product/${item.id}`) }} className='btn btn-primary'>view details</button>
+                    </div>
+                    
                 </div>
             </div>
             </div>

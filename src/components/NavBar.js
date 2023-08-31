@@ -36,11 +36,9 @@ function NavBar({loggedIn}){
                 justifyContent:"space-between"
             }}>
                 <ul class="navbar-nav mw-auto mb-2 mb-lg-0">
-             
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="/">Products</a>
                 </li>
-                
                 </ul>
                <div className="buttons" >
 

@@ -45,6 +45,7 @@ useEffect(()=>{ fetch("http://localhost:8000/plants")
           <Route path='/signup' element={<Register/>}></Route>
           <Route path='/cart' element={<Cart/>}></Route>
           <Route path='/product/:id' element={<Product plants={plants}/>}></Route>
+          <Route path='/product/:id' element={<Logout setloggedin={setIsLoggedin}/>}></Route>
           
     </Routes>
      

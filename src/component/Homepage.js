@@ -4,6 +4,7 @@ import  { useCart } from "react-use-cart"
 function Homepage({ plants,addToCart }) {
   // const [cartItems, setCartItems] = useState([]);
   const { addItem }= useCart();
+  
   // function addToCart(item){
   //   setCartItems([...cartItems, item]);
   //   alert("Item added to cart successfully");

@@ -1,8 +1,8 @@
 import "../navbar.css"
 import { Link } from "react-router-dom";
-
+import { useCart } from "react-use-cart"
 function NavBar(){
-
+    const { totalItems }= useCart();
     return(
        <div> 
         <nav class="navbar navbar-expand-lg navbar-light py-10" style={{
@@ -38,7 +38,7 @@ function NavBar(){
                <div className="buttons" >
                     <Link to="/login" className="btn btn-outline-dark ms-2"> <i className="fa fa-sign-in me-1"></i>Login</Link>
                     <Link to="/signup" className="btn btn-outline-dark"> <i className="fa fa-user-plus ms-2"></i>Register</Link>
-                    <Link to="/cart" className="btn btn-outline-dark"> <i className="fa fa-shopping-cart ms-2"></i>Cart (0)</Link>
+                    <Link to="/cart" className="btn btn-outline-dark"> <i className="fa fa-shopping-cart ms-2"></i>Cart ({totalItems})</Link>
                </div>
             </div>
             </div>

@@ -1,7 +1,21 @@
+import { useCart } from "react-use-cart";
 import "../cart.css"
 
 
 function Cart (){
+    const {
+        items, 
+        isEmpty,
+        totalItems,
+        cartTotal,
+        updateItemQuantity,
+        removeItem,
+        emptyCart,
+        totalUniqueItems,
+    }= useCart();
+
+    console.log(items)
+
     return (
         <div>
             <section className="h-100 h-custom" style={{backgroundColor: "#eee"}}>
@@ -15,85 +29,42 @@ function Cart (){
               <div className="col-lg-6 px-5 py-4">
 
                 <h3 className="mb-5 pt-2 text-center fw-bold text-uppercase">Your products</h3>
-
-                <div className="d-flex align-items-center mb-5">
-                  <div className="flex-shrink-0">
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/13.webp"
-                      className="img-fluid" style={{width: "150px"}} alt="Generic placeholder image"/>
-                  </div>
-                  <div className="flex-grow-1 ms-3">
-                    <a href="#!" className="float-end text-black"><i className="fas fa-times"></i></a>
-                    <h5 className="text-primary">Samsung Galaxy M11 64GB</h5>
-                    <h6 style={{color: "#9e9e9e", Color: "white"}}></h6>
-                    <div className="d-flex align-items-center">
-                      <p className="fw-bold mb-0 me-5 pe-3">799$</p>
-                      <div className="def-number-input number-input safari_only">
-                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                          className="minus"></button>
-                        <input className="quantity fw-bold text-black" min="0" name="quantity" value="1"
-                          type="number"/>
-                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                          className="plus"></button>
+                {items.map(item=>(
+                        <div className="d-flex align-items-center mb-5">
+                        <div className="flex-shrink-0">
+                          <img src={item.image}
+                            className="img-fluid" style={{width: "150px"}} alt="Generic placeholder image"/>
+                        </div>
+                        <div className="flex-grow-1 ms-3">
+                          <a href="" className="float-end text-black" onClick={()=> removeItem(item.id)}><i className="fas fa-times"></i></a>
+                          <h5 className="text-primary">{item.name}</h5>
+                          <h6 style={{color: "#9e9e9e", Color: "white"}}></h6>
+                          <div className="d-flex align-items-center">
+                            <p className="fw-bold mb-0 me-5 pe-3">{item.price}$</p>
+                            <div className="def-number-input number-input safari_only">
+                              <button onClick={()=>updateItemQuantity(item.id, item.quantity-1)}
+                                className="minus"></button>
+                              <p className="quantity fw-bold text-black" min="0" name="quantity">{item.quantity}</p>
+                               
+                              <button onClick={()=>updateItemQuantity(item.id, item.quantity + 1)}
+                                className="plus"></button>
+                            </div>
+                            
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="d-flex align-items-center mb-5">
-                  <div className="flex-shrink-0">
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/6.webp"
-                      className="img-fluid" style={{width: "150px"}} alt="Generic placeholder image"/>
-                  </div>
-                  <div className="flex-grow-1 ms-3">
-                    <a href="#!" className="float-end text-black"><i className="fas fa-times"></i></a>
-                    <h5 className="text-primary">Headphones Bose 35 II</h5>
-                    <h6 style={{color: "#9e9e9e"}}>Color: Red</h6>
-                    <div className="d-flex align-items-center">
-                      <p className="fw-bold mb-0 me-5 pe-3">239$</p>
-                      <div className="def-number-input number-input safari_only">
-                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                          className="minus"></button>
-                        <input className="quantity fw-bold text-black" min="0" name="quantity" value="1"
-                          type="number"/>
-                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                          className="plus"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="d-flex align-items-center mb-5">
-                  <div className="flex-shrink-0">
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/1.webp"
-                      className="img-fluid" style={{width: "150px"}} alt="Generic placeholder image"/>
-                  </div>
-                  <div className="flex-grow-1 ms-3">
-                    <a href="#!" className="float-end text-black"><i className="fas fa-times"></i></a>
-                    <h5 className="text-primary">iPad 9.7 6-gen WiFi 32GB</h5>
-                    <h6 style={{color: "#9e9e9e"}}>Color: rose pink</h6>
-                    <div className="d-flex align-items-center">
-                      <p className="fw-bold mb-0 me-5 pe-3">659$</p>
-                      <div className="def-number-input number-input safari_only">
-                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                          className="minus"></button>
-                        <input className="quantity fw-bold text-black" min="0" name="quantity" value="2"
-                          type="number"/>
-                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                          className="plus"></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                ))}
+                
 
                 <hr className="mb-4" style={{height: "2px", backgroundColor: "#1266f1", opacity: 1}}/>
 
                 <div className="d-flex justify-content-between px-x">
                   <p className="fw-bold">Discount:</p>
-                  <p className="fw-bold">95$</p>
+                  <p className="fw-bold">{cartTotal * 10/100 }$</p>
                 </div>
                 <div className="d-flex justify-content-between p-2 mb-2" style={{backgroundColor: "#e1f5fe"}}>
                   <h5 className="fw-bold mb-0">Total:</h5>
-                  <h5 className="fw-bold mb-0">2261$</h5>
+                  <h5 className="fw-bold mb-0">{cartTotal}$</h5>
                 </div>
 
               </div>

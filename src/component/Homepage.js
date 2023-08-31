@@ -1,30 +1,35 @@
 import React, { useState } from 'react';
-
+import  { useCart } from "react-use-cart"
 
 function Homepage({ plants,addToCart }) {
-  const [cartItems, setCartItems] = useState([]);
-
-  function addToCart(item){
-    setCartItems([...cartItems, item]);
-    alert("Item added to cart successfully");
-  }
+  // const [cartItems, setCartItems] = useState([]);
+  const { addItem }= useCart();
+  // function addToCart(item){
+  //   setCartItems([...cartItems, item]);
+  //   alert("Item added to cart successfully");
+  // }
   
 
   return (
     <>
-      <h1 className="title">Welcome to our Greenshop</h1>
-      <div className="product-list">
+      <h1 className="text-center mt-3">All Items</h1>
+      <section className='py-4 container'>
+        <div className='row justify-content-center'>
         {plants.map((item) => (
-          <div className="products" key={item.id}>
-            <img src={item.image} alt={item.name} />
-            <h4>Plant name: {item.name}</h4>
-            <h4>Plant price:$ {item.price}</h4>
-            <h4>Plant Category: {item.category}</h4>
-            <button onClick={() => addToCart(item)}>Add to Cart</button>
-          </div>
-        ))}
-      </div>
-     
+          <div className='col-11 col-md-5 col-lg-3 mx-0 mb-4' key={item.id}> 
+            <div className='card p-0 overflow-hidden h-100 shadow'>
+                <img src={item.image}  className='card-img-top img-fluid' alt={item.name}/>
+                <div className='card-body'>
+                    <h5 className='card-Title'>{item.name}</h5>
+                    <h5 className='card-Title'>$ {item.price}</h5>
+                    <p className='card-text'>{item.category}</p>
+                    <button  onClick={() => addItem(item)} className='btn btn-success'>addToCart</button>
+                </div>
+            </div>
+            </div>
+   ))}
+        </div>
+      </section> 
     </>
   );
 }

@@ -1,11 +1,12 @@
 
 import React,{useState,useEffect } from 'react'
 import Homepage from "./component/Homepage"
- import './App.css'
+//  import './App.css'
 import NavBar from './components/NavBar';
 import Login from './components/login';
 import Register from './components/register';
 import { Routes, Route } from "react-router-dom"
+import Cart from './components/Cart';
 
 
 
@@ -37,6 +38,7 @@ useEffect(()=>{ fetch("http://localhost:8000/plants")
           <Route path='/' element={<Homepage plants={plants} addToCart={addToCart} cartItems={cartItems}/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/signup' element={<Register/>}></Route>
+          <Route path='/cart' element={<Cart/>}></Route>
           
     </Routes>
      

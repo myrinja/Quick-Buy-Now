@@ -5,7 +5,7 @@ function Login(){
     const[users, setUsers] = useState()
     let navigate= useNavigate()
     useEffect(()=>{
-        fetch("http://localhost:4000/users")
+        fetch("http://localhost:8000/users")
         .then(res=>res.json())
         .then(data=> setUsers(data))
         .catch(e=>console.log(e))

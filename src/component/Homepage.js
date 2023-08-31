@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import Cart from './card';
 
-function Homepage({ plants }) {
+
+function Homepage({ plants,addToCart }) {
   const [cartItems, setCartItems] = useState([]);
 
-  const addToCart = (item) => {
+  function addToCart(item){
     setCartItems([...cartItems, item]);
     alert("Item added to cart successfully");
-  };
+  }
+  
 
   return (
     <>
@@ -23,7 +24,7 @@ function Homepage({ plants }) {
           </div>
         ))}
       </div>
-      <Cart cartItems={cartItems} />
+     
     </>
   );
 }

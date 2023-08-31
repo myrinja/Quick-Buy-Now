@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import LoginValidator from "./validations/loginValidator";
-function Login(){
+function Login({setloggedin}){
     const[users, setUsers] = useState()
     let navigate= useNavigate()
     useEffect(()=>{
         fetch("http://localhost:8000/users")
         .then(res=>res.json())
-        .then(data=> setUsers(data))
+        .then(data=> {
+            setUsers(data)})
         .catch(e=>console.log(e))
     }, [])
 
@@ -30,6 +31,7 @@ function Login(){
         console.log(formData)
         let user=users.filter(user=> (user.email === formData.email && user.password === formData.password))
         if (user.length>0){
+            setloggedin(true)
             navigate("/")
         }else{
             setErrors({"login": "user does not exist"}) 

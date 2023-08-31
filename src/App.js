@@ -7,6 +7,7 @@ import Login from './components/login';
 import Register from './components/register';
 import { Routes, Route } from "react-router-dom"
 import Cart from './components/Cart';
+import Logout from './components/logout';
 
 
 
@@ -15,6 +16,7 @@ import Cart from './components/Cart';
 function App() {
 
 const [cartItems, setCartItems] = useState([]);
+const[isloggedIn, setIsLoggedin]=useState(false);
 
   const addToCart = (item) => {
     setCartItems([...cartItems, item]);
@@ -32,13 +34,14 @@ useEffect(()=>{ fetch("http://localhost:8000/plants")
 
   return (
    <div>
-    <NavBar/>
+    <NavBar loggedIn={isloggedIn}/>
    
     <Routes>
           <Route path='/' element={<Homepage plants={plants} addToCart={addToCart} cartItems={cartItems}/>}></Route>
-          <Route path='/login' element={<Login/>}></Route>
+          <Route path='/login' element={<Login setloggedin={setIsLoggedin}/>}></Route>
           <Route path='/signup' element={<Register/>}></Route>
           <Route path='/cart' element={<Cart/>}></Route>
+          <Route path='/logout' element={<Logout setloggedin={setIsLoggedin}/>}></Route>
           
     </Routes>
      

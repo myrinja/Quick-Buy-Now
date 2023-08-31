@@ -1,8 +1,23 @@
 import "../navbar.css"
 import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart"
-function NavBar(){
+
+
+function NavBar({loggedIn}){
     const { totalItems }= useCart();
+    let buttons;
+    if(loggedIn){
+        buttons=(
+            <Link to="/logout" className="btn btn-outline-dark ms-2"> <i className="fa fa-sign-in me-1"></i>Logout</Link>
+        )
+    }else{
+        buttons=(
+            <>
+            <Link to="/login" className="btn btn-outline-dark ms-2"> <i className="fa fa-sign-in me-1"></i>Login</Link>
+            <Link to="/signup" className="btn btn-outline-dark"> <i className="fa fa-user-plus ms-2"></i>Register</Link>
+            </>
+        )
+    }
     return(
        <div> 
         <nav class="navbar navbar-expand-lg navbar-light py-10" style={{
@@ -21,23 +36,16 @@ function NavBar(){
                 justifyContent:"space-between"
             }}>
                 <ul class="navbar-nav mw-auto mb-2 mb-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
+             
                 <li class="nav-item">
                     <a class="nav-link" href="/">Products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
                 </li>
                 
                 </ul>
                <div className="buttons" >
-                    <Link to="/login" className="btn btn-outline-dark ms-2"> <i className="fa fa-sign-in me-1"></i>Login</Link>
-                    <Link to="/signup" className="btn btn-outline-dark"> <i className="fa fa-user-plus ms-2"></i>Register</Link>
+
+                    {buttons}
+                   
                     <Link to="/cart" className="btn btn-outline-dark"> <i className="fa fa-shopping-cart ms-2"></i>Cart ({totalItems})</Link>
                </div>
             </div>

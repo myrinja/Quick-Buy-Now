@@ -1,5 +1,6 @@
 import { useCart } from "react-use-cart";
 import "../cart.css"
+import { Link } from "react-router-dom";
 
 
 function Cart (){
@@ -64,7 +65,7 @@ function Cart (){
                 </div>
                 <div className="d-flex justify-content-between p-2 mb-2" style={{backgroundColor: "#e1f5fe"}}>
                   <h5 className="fw-bold mb-0">Total:</h5>
-                  <h5 className="fw-bold mb-0">{cartTotal}$</h5>
+                  <h5 className="fw-bold mb-0">{cartTotal.toFixed(2)}$</h5>
                 </div>
 
               </div>
@@ -75,41 +76,40 @@ function Cart (){
                 <form className="mb-5">
 
                   <div className="form-outline mb-5">
-                    <input type="text" id="typeText" className="form-control form-control-lg" siez="17"
-                      value="1234 5678 9012 3457" minlength="19" maxlength="19" />
+                    <input type="text" id="typeText" className="form-control form-control-lg" size={17}
+                      minlength={19} maxlength={19} />
                     <label className="form-label" for="typeText">Card Number</label>
                   </div>
 
                   <div className="form-outline mb-5">
-                    <input type="text" id="typeName" className="form-control form-control-lg" siez="17"
-                      value="John Smith" />
+                    <input type="text" id="typeName" className="form-control form-control-lg" size={17}
+                       />
                     <label className="form-label" for="typeName">Name on card</label>
                   </div>
 
                   <div className="row">
                     <div className="col-md-6 mb-5">
                       <div className="form-outline">
-                        <input type="text" id="typeExp" className="form-control form-control-lg" value="01/22"
-                          size="7"  minlength="7" maxlength="7" />
+                        <input type="text" id="typeExp" className="form-control form-control-lg"
+                          size={17}
+                          minlength={19} maxlength={19}/>
                         <label className="form-label" for="typeExp">Expiration</label>
                       </div>
                     </div>
                     <div className="col-md-6 mb-5">
                       <div className="form-outline">
                         <input type="password" id="typeText" className="form-control form-control-lg"
-                          value="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
+                           size={17}
+                           minlength={19} maxlength={19} />
                         <label className="form-label" for="typeText">Cvv</label>
                       </div>
                     </div>
                   </div>
 
-                  <p className="mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit <a
-                      href="#!">obcaecati sapiente</a>.</p>
-
-                  <button type="button" className="btn btn-primary btn-block btn-lg">Buy now</button>
+                  <button type="submit" className="btn btn-primary btn-block btn-lg">Buy now</button>
 
                   <h5 className="fw-bold mb-5" style={{position: "absolute", bottom: 0}}>
-                    <a href="#!"><i className="fas fa-angle-left me-2"></i>Back to shopping</a>
+                    <Link to="/"><i className="fas fa-angle-left me-2"></i>Back to shopping</Link>
                   </h5>
 
                 </form>

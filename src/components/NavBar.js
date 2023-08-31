@@ -22,18 +22,8 @@ function NavBar(){
             }}>
                 <ul class="navbar-nav mw-auto mb-2 mb-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="/">Products</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-                
                 </ul>
                <div className="buttons" >
                     <Link to="/login" className="btn btn-outline-dark ms-2"> <i className="fa fa-sign-in me-1"></i>Login</Link>

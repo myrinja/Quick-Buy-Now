@@ -5,29 +5,33 @@ import Homepage from "./component/Homepage"
 import NavBar from './components/NavBar';
 import Login from './components/login';
 import Register from './components/register';
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route} from "react-router-dom"
 import Cart from './components/Cart';
+import Product from './components/Product';
 
 
 
 
 
 function App() {
+  
 
 const [cartItems, setCartItems] = useState([]);
 
-  const addToCart = (item) => {
-    setCartItems([...cartItems, item]);
-    
-    alert("Item added to cart successfully");
-   
-  };
+
+const addToCart = (item) => {
+  setCartItems([...cartItems, item]);
+  
+  alert("Item added to cart successfully");
+  
+};
   
 const[plants, setPlants]=useState([])
 useEffect(()=>{ fetch("http://localhost:8000/plants") 
 .then(res => res.json())
   .then(data => setPlants(data))
  },[])
+
 
 
   return (
@@ -39,6 +43,7 @@ useEffect(()=>{ fetch("http://localhost:8000/plants")
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/signup' element={<Register/>}></Route>
           <Route path='/cart' element={<Cart/>}></Route>
+          <Route path='/product/:id' element={<Product plants={plants}/>}></Route>
           
     </Routes>
      

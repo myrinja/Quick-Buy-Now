@@ -9,7 +9,7 @@ function Register(){
     const navigate=useNavigate()
 
     useEffect(()=>{
-        fetch("http://localhost:8000/users")
+        fetch("https://quick-buy-now-db.vercel.app/users")
         .then(res=>res.json())
         .then(data=> setUsers(data))
         .catch(e=>console.log(e))

@@ -28,7 +28,7 @@ const addToCart = (item) => {
 };
   
 const[plants, setPlants]=useState([])
-useEffect(()=>{ fetch("http://localhost:8000/plants") 
+useEffect(()=>{ fetch("https://quick-buy-now-db.vercel.app/plants") 
 .then(res => res.json())
   .then(data => setPlants(data))
  },[])
